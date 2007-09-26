@@ -9,7 +9,7 @@ Author URI: http://www.daikos.net
 */
 
 function daikos_thickbox() {
-	$thickbox_path =  get_settings('siteurl')."/wp-content/plugins/DYTW/thickbox/";
+	$thickbox_path =  get_settings('siteurl')."/wp-content/plugins/daikos-youtube-widget/thickbox/";
 	echo("<!-- Start Daiko's ThicBox Plugin -->
 <link rel='stylesheet' href='".$thickbox_path."thickbox.css' type='text/css' media='screen' />
 <script type='text/javascript' src='".$thickbox_path."jquery.js'></script>

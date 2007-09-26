@@ -2,7 +2,7 @@
 Donate link: http://www.daikos.net
 Contributors: Daiko
 Tags: youtube, thickbox, plugin, video, widget, sidebar
-Requires at least: 2.0Tested up to: 2.2Stable tag: 1.0.2
+Requires at least: 2.0Tested up to: 2.2Stable tag: 1.0.3
 
 Adds a sidebar widget to display random YouTube videos of your own choice. Uses a ThickBox pop-up player or VideoPlayer widget to play the videos.
 
@@ -16,7 +16,7 @@ On the other hand, if you want to use ThickBox and swfObjects on other parts of 
 
 Author: Rune Fjellheim
 
-Version: 1.0
+Version: 1.0.3
 
 Author URI: http://www.daikos.net
 
@@ -27,7 +27,7 @@ Copyright: Released under GNU GENERAL PUBLIC LICENSE
 == Installation ==
 
 
-1.	Copy the DYTW folder to your /wp-content/plugins/ folder
+1.	Copy the daikos-youtube-widget folder to your /wp-content/plugins/ folder
 
 2.	Activate the Daiko's YouTube Widget and/or ThickBox on your plugin-page.
 
