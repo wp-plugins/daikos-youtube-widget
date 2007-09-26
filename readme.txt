@@ -8,7 +8,7 @@ Adds a sidebar widget to display random YouTube videos of your own choice. Uses 
 
 == Description ==
 
-Adds a sidebar widget to display a defined number of random YouTube videos of your own choice. Make your own videolist in the widget-control-panel. Syntax: [YouTube ID]@[Title](Line Brake). * Is optional. Do not add a (Line Brake) after the last video in the list.
+Adds a sidebar widget to display a defined number of random YouTube videos of your own choice. Make your own videolist in the widget-control-panel. Syntax: [YouTube ID]@[Title](Line Brake). Do not add a (Line Brake) after the last video in the list.
 
 The widget includes an optional plugin to activate ThickBox 3.1 developed by Cody Lindley to display videos as a pop-up and uses swfObjects 1.5 by Geoff Stearns. If you by any chance don't want to use the ThickBox player activate the included Daiko's VideoPlayer widget.
 
@@ -37,12 +37,7 @@ Copyright: Released under GNU GENERAL PUBLIC LICENSE
 To make your video-list just open the widget-control-panel and add 
 your videos with the following syntax:
 
-[YouTubeID]@[Title]
-[YouTubeID]@[Title]
-[YouTubeID]@[Title]
-[YouTubeID]@[Title]
-[YouTubeID]@[Title]
-[YouTubeID]@[Title]
+[YouTubeID]@[Title](Line Break)
 
 Without the brackets.
 
