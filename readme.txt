@@ -2,21 +2,25 @@
 Donate link: http://www.daikos.net
 Contributors: Daiko
 Tags: youtube, thickbox, plugin, video, widget, sidebar
-Requires at least: 2.0Tested up to: 2.2Stable tag: 1.0.7
+Requires at least: 2.0Tested up to: 2.3Stable tag: 1.0.8
 
 Adds a sidebar widget to display random YouTube videos of your own choice. Uses a ThickBox pop-up player or VideoPlayer widget to play the videos.
 
 == Description ==
 
-Adds a sidebar widget to display a defined number of random YouTube videos of your own choice. Make your own videolist in the widget-control-panel. Syntax: {YouTubeID}@{Title}(Line Brake). Do not add a (Line Brake) after the last video in the list.
+Adds a sidebar widget to display a defined number of random YouTube videos of your own choice. Make your own videolist in the widget-control-panel. Syntax: {YouTubeID}@{Title}(Line Brake) without the brackets. Do not add a (Line Brake) after the last video in the list.
 
-The widget includes an optional plugin to activate ThickBox 3.1 developed by Cody Lindley to display videos as a pop-up and uses swfObjects 1.5 by Geoff Stearns. If you by any chance don't want to use the ThickBox player activate the included Daiko's VideoPlayer widget.
+The widget includes a plugin to activate ThickBox 3.1 developed by Cody Lindley to display videos as a pop-up and uses swfObjects 1.5 by Geoff Stearns. If you by any chance don't want to use the ThickBox player activate the included Daiko's VideoPlayer Widget. The two player options can be mixed. If both are active on a page, Daiko's VideoPlayer Widget will override the ThickBox pop-up player.
 
-On the other hand, if you want to use ThickBox and swfObjects on other parts of your blog, the libraries are available on the pages that has Daiko's YouTube Widget active.
+If you want to use ThickBox and swfObjects on other parts of your blog, the libraries are available as long as Daiko's YouTube Widget and Daiko's ThickBox plugin are activated.
+
+For those of you using ThickBox already, be aware that activating my ThickBox (I use ThickBox v. 3.1) plugin may cause problems due to the script being loaded twice. Until I find an other way to check if ThickBox is already loaded, please disable your current ThickBox scripts before activating my ThickBox plugin. It should be backwards compatible so your scripts should work just as well with Daiko's ThickBox plugin activated.
+
+A core part of ThickBox is the jquery.js library. I've found some problems with interaction between this library and the prototype.js and the scriptacolous.js. I've tried some of the suggested solutions to prevent this with limited success. I'm open for suggestions on how to deal with this. Typically some themes (with a AJAX functionality) and some plugins use these librarys. 
 
 Author: Rune Fjellheim
 
-Version: 1.0.7
+Version: 1.0.8
 
 Author URI: http://www.daikos.net
 

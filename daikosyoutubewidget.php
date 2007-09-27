@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Daiko's YouTube Widget
-Plugin URI: http://www.daikos.net/daikos-youtube-widget/
+Plugin URI: http://www.daikos.net/widgets/daikos-youtube-widget/
 Description: Adds a sidebar widget to display random YouTube videos of your own choice.Make your own videolist in the widget-control-panel. Syntax: [YouTube ID]@[Title]<Line Brake>.
 Author: Rune Fjellheim
-Version: 1.0.7
+Version: 1.0.8
 License: GPL
 Author URI: http://www.daikos.net
 */
@@ -95,7 +95,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	}
 
 	function widget_daikos_youtube($args, $number = 1) {
-		$dytwVersion = "Daiko's YouTube Widget v. 1.0.7";
+		$dytwVersion = "Daiko's YouTube Widget v. 1.0.8";
 		extract($args);
 		$options = get_option('widget_daikos_youtube');
 		$videoplayeroptions = get_option('widget_daikos_videoplayer');
@@ -161,8 +161,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 		  		}
 				break;
 								
-			}
-		
+			}		
 		
 		$format = $options[$number]['format'];
 		if (is_active_widget('widget_daikos_videoplayer') && $showplayer) {
@@ -237,7 +236,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 								
 			}
 			
-              echo ""; ?>
+              echo "</div>"; ?>
 			<?php echo $after_widget."
 			"; ?>
 	
@@ -277,19 +276,22 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	
 	function widget_daikos_youtube_head() {
    			 ?>
+<!-- This loads the required scripts for Daiko's YouTube Widget -->
 <link rel="stylesheet" href="<?php bloginfo('url'); ?>/wp-content/plugins/daikos-youtube-widget/dytw.css" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/daikos-youtube-widget/js/swfobject.js"></script>			
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/daikos-youtube-widget/js/swfobject.js"></script>
+<!-- End of script load Daiko's YouTube Widget -->			
 				 <?php
 	}
 	
 	function widget_daikos_youtube_footer(){
 				 ?>
+<!-- This is a container for the ThickBox pop-up player in Daiko's YouTube Widget -->
 <div id="BigPlayer" style="display: none;">
-<!-- This is just a container for the video player in Daiko's YouTube Widget -->
 <div id="flashcontent">
 Loading....
 </div>
 </div>
+<!-- End of container for the ThickBox pop-up player in Daiko's YouTube Widget -->
 		<?php
 	}
 	
