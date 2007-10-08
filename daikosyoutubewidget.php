@@ -310,7 +310,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 		if ( $options != $newoptions ) {
 			$options = $newoptions;
 			update_option('widget_daikos_youtube', $options);
-			widget_text_register($options['number']);
+			widget_daikos_youtube_register($options['number']);
 		}
 	}
 	
