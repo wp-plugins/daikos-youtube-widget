@@ -4,7 +4,7 @@ Plugin Name: Daiko's YouTube Widget
 Plugin URI: http://www.daikos.net/widgets/daikos-youtube-widget/
 Description: Adds a sidebar widget to display random YouTube videos of your own choice. Make your own videolist in the widget-control-panel and/or add your favorite tag(s), user(s). Syntax: [YouTube ID]@[Title]<Line Brake>.
 Author: Rune Fjellheim
-Version: 1.1.3
+Version: 1.1.4
 License: GPL
 Author URI: http://www.daikos.net
 */
@@ -100,7 +100,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	}
 
 	function widget_daikos_youtube($args, $number = 1) {
-		$dytwVersion = "Daiko's YouTube Widget v. 1.1.3";
+		$dytwVersion = "Daiko's YouTube Widget v. 1.1.4";
 		extract($args);
 		$options = get_option('widget_daikos_youtube');
 		$videoplayeroptions = get_option('widget_daikos_videoplayer');
@@ -231,7 +231,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 		} 
 		elseif (function_exists('daikos_thickbox'))  {
 			$width = 500;
-			$heigth = round($width*0.836);
+			$height = round($width*0.836);
 			for ($i=0; $i<$count ;++$i) {
 				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \'100%\', \'100%\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'flashcontent\');" href="#TB_inline?height='.$height.'&amp;width='.$width.'&amp;inlineId=flashcontent" class="thickbox"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_bloginfo("url").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
 			}
