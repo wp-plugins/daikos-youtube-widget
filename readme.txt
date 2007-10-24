@@ -2,7 +2,7 @@
 Donate link: http://www.daikos.net/donate
 Contributors: Daiko
 Tags: youtube, thickbox, plugin, video, widget, sidebar
-Requires at least: 2.0
+Requires at least: 2.1
 Tested up to: 2.3
 Stable tag: 1.1.4
 
@@ -25,7 +25,7 @@ A core part of ThickBox is the jquery.js library. I've found some problems with 
 
 Author: Rune Fjellheim
 
-Version: 1.1.4
+Version: 1.1.5
 
 Author URI: http://www.daikos.net
 
