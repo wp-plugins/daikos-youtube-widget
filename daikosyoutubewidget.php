@@ -4,7 +4,7 @@ Plugin Name: Daiko's YouTube Widget
 Plugin URI: http://www.daikos.net/widgets/daikos-youtube-widget/
 Description: Adds a sidebar widget to display random YouTube videos of your own choice. Make your own videolist in the widget-control-panel and/or add your favorite tag(s), user(s). Syntax: [YouTube ID]@[Title]<Line Brake>.
 Author: Rune Fjellheim
-Version: 1.1.8
+Version: 1.1.10
 License: GPL
 Author URI: http://www.daikos.net
 */
@@ -100,7 +100,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	}
 
 	function widget_daikos_youtube($args, $number = 1) {
-		$dytwVersion = "Daiko's YouTube Widget v. 1.1.8";
+		$dytwVersion = "Daiko's YouTube Widget v. 1.1.10";
 		extract($args);
 		$options = get_option('widget_daikos_youtube');
 		$videoplayeroptions = get_option('widget_daikos_videoplayer');
