@@ -21,7 +21,7 @@ If you want to use ThickBox and swfObjects on other parts of your blog, the libr
 
 For those of you using ThickBox already, be aware that activating my ThickBox (I use ThickBox v. 3.1) plugin may cause problems due to the script being loaded twice. Until I find an other way to check if ThickBox is already loaded, please disable your current ThickBox scripts before activating my ThickBox plugin. It should be backwards compatible so your scripts should work just as well with Daiko's ThickBox plugin activated.
 
-A core part of ThickBox is the jquery.js library. I've found some problems with interaction between this library and the prototype.js and the scriptacolous.js. I've tried some of the suggested solutions to prevent this with limited success. I'm open for suggestions on how to deal with this. Typically some themes (with a AJAX functionality) and some plugins use these librarys. 
+A core part of ThickBox is the jquery.js library. I use the WP script loader and a noConflict version of ThickBox to prevent conflicts with prototype.js and scriptacolous.js. Please report any other potential script conflicts. 
 
 Author: Rune Fjellheim
 
