@@ -225,7 +225,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 			if (empty($width)) $width = 200;
 			$height = round($width*0.836);
 			for ($i=0; $i<$count ;++$i) {
-				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \''.$width.'\', \''.$height.'\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'BigPlayer2\');" href="#BigPlayer2"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_bloginfo("url").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
+				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \''.$width.'\', \''.$height.'\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'BigPlayer2\');" href="#BigPlayer2"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_options("siteurl").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
 			}
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		} 
@@ -233,12 +233,12 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 			$width = 500;
 			$height = round($width*0.825);
 			for ($i=0; $i<$count ;++$i) {
-				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \'100%\', \'98%\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'flashcontent\');" href="#TB_inline?height='.$height.'&amp;width='.$width.'&amp;inlineId=flashcontent" class="thickbox"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_bloginfo("url").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
+				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \'100%\', \'98%\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'flashcontent\');" href="#TB_inline?height='.$height.'&amp;width='.$width.'&amp;inlineId=flashcontent" class="thickbox"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_options("siteurl").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
 			}
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		}
 		else {
-		   	$fulltext = "This widget requires that you activate <a href=\"".get_bloginfo('url')."/wp-admin/plugins.php\">Daiko's ThickBox Plugin</a> or activate the <a href=\"".get_bloginfo('url')."/wp-admin/widgets.php\">Daiko's VideoPlayer Widget</a>."; 
+		   	$fulltext = "This widget requires that you activate <a href=\"".get_options('siteurl')."/wp-admin/plugins.php\">Daiko's ThickBox Plugin</a> or activate the <a href=\"".get_options('siteurl')."/wp-admin/widgets.php\">Daiko's VideoPlayer Widget</a>."; 
 		}
 		
 /* And do the widget dance! */
