@@ -4,7 +4,7 @@ Plugin Name: Daiko's YouTube Widget
 Plugin URI: http://www.daikos.net/widgets/daikos-youtube-widget/
 Description: Adds a sidebar widget to display random YouTube videos of your own choice. Make your own videolist in the widget-control-panel and/or add your favorite tag(s), user(s). Syntax: [YouTube ID]@[Title]<Line Brake>.
 Author: Rune Fjellheim
-Version: 1.1.0
+Version: 1.1.8
 License: GPL
 Author URI: http://www.daikos.net
 */
@@ -100,7 +100,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	}
 
 	function widget_daikos_youtube($args, $number = 1) {
-		$dytwVersion = "Daiko's YouTube Widget v. 1.1.0";
+		$dytwVersion = "Daiko's YouTube Widget v. 1.1.8";
 		extract($args);
 		$options = get_option('widget_daikos_youtube');
 		$videoplayeroptions = get_option('widget_daikos_videoplayer');
@@ -223,22 +223,22 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 		if (is_active_widget('widget_daikos_videoplayer') && $showplayer) {
 			$width = $videoplayeroptions['width'];                              // Format to play the video in
 			if (empty($width)) $width = 200;
-			$heigth = round($width*0.82352941);
+			$height = round($width*0.836);
 			for ($i=0; $i<$count ;++$i) {
-				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \''.$width.'\', \''.$heigth.'\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'BigPlayer2\');" href="#BigPlayer2"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_bloginfo("url").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
+				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \''.$width.'\', \''.$height.'\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'BigPlayer2\');" href="#BigPlayer2"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_options("siteurl").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
 			}
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		} 
 		elseif (function_exists('daikos_thickbox'))  {
 			$width = 500;
-			$heigth = round($width*0.82352941);
+			$height = round($width*0.825);
 			for ($i=0; $i<$count ;++$i) {
-				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \'500\', \'375\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'flashcontent\');" href="#TB_inline?height=385&amp;width=500&amp;inlineId=flashcontent" class="thickbox"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_bloginfo("url").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
+				$fulltext = $fulltext.'<div class="DYTWWrapperOuter'.$format.'"><div class="DYTWWrapperInner'.$format.'"><a onclick="var so = new SWFObject(\'http://www.youtube.com/v/'.$mediaID[$i].'&amp;autoplay=1\', \'DYTW'.$i.'\', \'100%\', \'98%\', \'8\', \'#336699\');so.addParam(\'wmode\', \'transparent\');'.$addParameter.' so.write(\'flashcontent\');" href="#TB_inline?height='.$height.'&amp;width='.$width.'&amp;inlineId=flashcontent" class="thickbox"><img src="http://img.youtube.com/vi/'.$mediaID[$i].'/default.jpg" alt="'.$videotitle[$i].'" title="'.$videotitle[$i].'"><div class="DYTWIcon'.$format.'"><img src="'.get_options("siteurl").'/wp-content/plugins/daikos-youtube-widget/play.png" alt="play" title="play" ></div></a></div></div>'; 
 			}
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		}
 		else {
-		   	$fulltext = "This widget requires that you activate <a href=\"".get_bloginfo('url')."/wp-admin/plugins.php\">Daiko's ThickBox Plugin</a> or activate the <a href=\"".get_bloginfo('url')."/wp-admin/widgets.php\">Daiko's VideoPlayer Widget</a>."; 
+		   	$fulltext = "This widget requires that you activate <a href=\"".get_options('siteurl')."/wp-admin/plugins.php\">Daiko's ThickBox Plugin</a> or activate the <a href=\"".get_options('siteurl')."/wp-admin/widgets.php\">Daiko's VideoPlayer Widget</a>."; 
 		}
 		
 /* And do the widget dance! */
@@ -310,7 +310,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 		if ( $options != $newoptions ) {
 			$options = $newoptions;
 			update_option('widget_daikos_youtube', $options);
-			widget_text_register($options['number']);
+			widget_daikos_youtube_register($options['number']);
 		}
 	}
 	
@@ -333,8 +333,8 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	function widget_daikos_youtube_head() {
    			 ?>
 <!-- This loads the required scripts for Daiko's YouTube Widget -->
-<link rel="stylesheet" href="<?php bloginfo('url'); ?>/wp-content/plugins/daikos-youtube-widget/dytw.css" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/daikos-youtube-widget/js/swfobject.js"></script>
+<link rel="stylesheet" href="<?php get_option('siteurl'); ?>/wp-content/plugins/daikos-youtube-widget/dytw.css" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php get_option('siteurl'); ?>/wp-content/plugins/daikos-youtube-widget/js/swfobject.js"></script>
 <!-- End of script load Daiko's YouTube Widget -->			
 				 <?php
 	}
