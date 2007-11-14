@@ -25,7 +25,7 @@ A core part of ThickBox is the jquery.js library. I use the WP script loader and
 
 Author: Rune Fjellheim
 
-Version: 1.2.1
+Version: 1.2.2
 
 Author URI: http://www.daikos.net
 
