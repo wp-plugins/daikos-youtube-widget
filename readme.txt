@@ -3,8 +3,8 @@ Donate link: http://www.daikos.net/donate
 Contributors: Daiko
 Tags: youtube, thickbox, plugin, video, widget, sidebar
 Requires at least: 2.1
-Tested up to: 2.3
-Stable tag: 1.2.3
+Tested up to: 2.5
+Stable tag: 1.2.4
 
 
 Adds a sidebar widget to display random YouTube videos of your own choice. Uses a ThickBox pop-up player or VideoPlayer widget to play the videos.
@@ -17,6 +17,8 @@ The widget also supports RSS-feeds from tag(s) and user(s). NEW in version 1.1.
 
 The widget includes a plugin to activate ThickBox 3.1 developed by Cody Lindley to display videos as a pop-up and uses swfObjects 1.5 by Geoff Stearns. If you by any chance don't want to use the ThickBox player activate the included Daiko's VideoPlayer Widget. The two player options can be mixed. If both are active on a page, Daiko's VideoPlayer Widget will override the ThickBox pop-up player.
 
+There is good support for Conditional Tags, meaning that you can specify where to show the widget. NEW in version 1.2.4 is support for "Post in Category(-ies)" where the point is to display the widget only if a post is in a specific category (or categories). It will also show in the category archive page(s). Specify the list of categories with comma separated category ID(WP<2.5) or name (WP>=2.5).
+
 If you want to use ThickBox and swfObjects on other parts of your blog, the libraries are available as long as Daiko's YouTube Widget and Daiko's ThickBox plugin are activated.
 
 For those of you using ThickBox already, be aware that activating my ThickBox (I use ThickBox v. 3.1) plugin may cause problems due to the script being loaded twice. Until I find an other way to check if ThickBox is already loaded, please disable your current ThickBox scripts before activating my ThickBox plugin. It should be backwards compatible so your scripts should work just as well with Daiko's ThickBox plugin activated.
@@ -25,7 +27,7 @@ A core part of ThickBox is the jquery.js library. I use the WP script loader and
 
 Author: Rune Fjellheim
 
-Version: 1.2.3
+Version: 1.2.4
 
 Author URI: http://www.daikos.net
 
