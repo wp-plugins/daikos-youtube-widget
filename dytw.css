@@ -66,50 +66,6 @@
 	height: 90px;
 	border: 0px;
 }
-.DYTWIconsmall {
-	position: relative;
-	z-index: 2;
-	width: 25px;
-	top: -20px;
-	left: 3px;
-}
-.DYTWIconsmall img {
-	border: 0px;
-	width: 15px;
-	height: 15px;
-	top:  19px;
-	left: 2px;
-}
-
-.DYTWIconmedium {
-	position: relative;
-	z-index: 2;
-	width: 25px;
-	top: -27px;
-	left: 4px;
-}
-.DYTWIconmedium img {
-	border: 0px;
-	width: 20px;
-	height: 20px;
-	top:  19px;
-	left: 2px;
-}
-.DYTWIconlarge {
-	position: relative;
-	z-index: 2;
-	width: 25px;
-	top: -31px;
-	left: 5px;
-}
-.DYTWIconlarge img {
-	border: 0px;
-	width: 25px;
-	height: 25px;
-	top:  19px;
-	left: 2px;
-}
-
 .DYTWcredits {
 	clear: left;
 	font-size: smaller;
