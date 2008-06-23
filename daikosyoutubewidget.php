@@ -4,7 +4,7 @@ Plugin Name: Daiko's YouTube Widget
 Plugin URI: http://www.daikos.net/widgets/daikos-youtube-widget/
 Description: Adds a sidebar widget to display random YouTube videos of your own choice. Make your own videolist in the widget-control-panel and/or add your favorite tag(s), user(s). Syntax: [YouTube ID]@[Title]<Line Brake>.
 Author: Rune Fjellheim
-Version: 1.2.4
+Version: 1.2.4 Beta
 License: GPL
 Author URI: http://www.daikos.net
 */
@@ -76,22 +76,22 @@ function widget_daikos_youtube_init() {
 		}
 		    
 	?>
-		<label for="daikos-youtube-title-<?php echo "$number"; ?>" title="Title above the widget" style="line-height:35px;display:block;">Title: <input type="text" style="width: 470px;" id="daikos-youtube-title-<?php echo "$number"; ?>" name="daikos-youtube-title-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['title']); ?>" /></label>
-		<label for="daikos-youtube-count-<?php echo "$number"; ?>" title="Number of videos to show" style="line-height:35px;">How many videos to show: <input type="integer" style="width: 80px;" id="daikos-youtube-count-<?php echo "$number"; ?>" name="daikos-youtube-count-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['count']); ?>" /></label>
-		<label for="daikos-youtube-format-<?php echo "$number"; ?>"  title="Size of the thumbnails." style="line-height:35px;">Format: <select name="daikos-youtube-format-<?php echo "$number"; ?>" id="daikos-youtube-format-<?php echo "$number"; ?>"><option label="Small" value="small" <?php if ($smallSelected){echo "selected";} ?>>Small</option><option label="Medium" value="medium" <?php if ($mediumSelected){echo "selected";} ?>>Medium</option><option label="Large" value="large" <?php if ($largeSelected){echo "selected";} ?>>Large</option></select> </label>
-		<label for="daikos-youtube-content-<?php echo "$number"; ?>" title="IMPORTANT: No line brake (new line) after the last video!" style="width: 495px; height: 280px;display:block;">Videos [YouTubeID]@[TITLE]{Line brake}<textarea style="width: 470px; height: 240px;" id="daikos-youtube-content-<?php echo "$number"; ?>" name="daikos-youtube-content-<?php echo "$number"; ?>"><?php echo htmlspecialchars($options[$number]['content']); ?></textarea></label>
-		<label for="daikos-youtube-tags-<?php echo "$number"; ?>" title="YouTube tag(s), separated by ," style="line-height:35px;display:block;">Feed from YouTube tag(s), separated by ,  : <input type="text" style="width: 202px;" id="daikos-youtube-tags-<?php echo "$number"; ?>" name="daikos-youtube-tags-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['tags']); ?>" /></label>
-		<label for="daikos-youtube-users-<?php echo "$number"; ?>" title="YouTube user(s), separated by ," style="line-height:35px;display:block;">Feed from YouTube user(s), separated by ,: <input type="text" style="width: 202px;" id="daikos-youtube-users-<?php echo "$number"; ?>" name="daikos-youtube-users-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['users']); ?>" /></label>
-		<label for="daikos-youtube-show-<?php echo "$number"; ?>"  title="Show only on specified page(s)/post(s)/category. Default is All" style="line-height:35px;">Display only on: <select name="daikos-youtube-show-<?php echo"$number"; ?>" id="daikos-youtube-show-<?php echo"$number"; ?>"><option label="All" value="all" <?php if ($allSelected){echo "selected";} ?>>All</option><option label="Home" value="home" <?php if ($homeSelected){echo "selected";} ?>>Home</option><option label="Post" value="post" <?php if ($postSelected){echo "selected";} ?>>Post(s)</option><option label="Post in Category ID(s)" value="post_in_category" <?php if ($postInCategorySelected){echo "selected";} ?>>Post In Category ID(s)</option><option label="Page" value="page" <?php if ($pageSelected){echo "selected";} ?>>Page(s)</option><option label="Category" value="category" <?php if ($categorySelected){echo "selected";} ?>>Category</option></select></label> 
-		<label for="daikos-youtube-slug-<?php echo "$number"; ?>"  title="Optional limitation to specific page, post or category. Use ID, slug or title." style="line-height:35px;">Slug/Title/ID: <input type="text" style="width: 130px;" id="daikos-youtube-slug-<?php echo "$number"; ?>" name="daikos-youtube-slug-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['slug']); ?>" /></label>
-		<?php if ($postInCategorySelected) echo "<p>In <strong>Post In Category</strong> add one or more cat. ID(s) or name(s) comma separated!</p>" ?>
-		<label for="daikos-youtube-help" title="You can get more help and instructionc on www.daikos.net!" style="line-height:25px;display:block;"><a href="http://www.daikos.net/widgets/daikos-youtube-widget/">Help</a></label>
+		<label for="daikos-youtube-title-<?php echo "$number"; ?>" title=<?php echo __("Title above the widget") ?> style="line-height:35px;display:block;"><?php echo __("Title: ") ?> <input type="text" style="width: 470px;" id="daikos-youtube-title-<?php echo "$number"; ?>" name="daikos-youtube-title-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['title']); ?>" /></label>
+		<label for="daikos-youtube-count-<?php echo "$number"; ?>" title=<?php echo __("Number of videos to show") ?> style="line-height:35px;"><?php echo __("How many videos to show: ") ?><input type="integer" style="width: 80px;" id="daikos-youtube-count-<?php echo "$number"; ?>" name="daikos-youtube-count-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['count']); ?>" /></label>
+		<label for="daikos-youtube-format-<?php echo "$number"; ?>"  title=<?php echo __("Size of the thumbnails.") ?> style="line-height:35px;"><?php echo __("Format: ") ?><select name="daikos-youtube-format-<?php echo "$number"; ?>" id="daikos-youtube-format-<?php echo "$number"; ?>"><option label="Small" value="small" <?php if ($smallSelected){echo "selected";} ?>><?php echo __("Small") ?></option><option label="Medium" value="medium" <?php if ($mediumSelected){echo "selected";} ?>><?php echo __("Medium") ?></option><option label="Large" value="large" <?php if ($largeSelected){echo "selected";} ?>><?php echo __("Large") ?></option></select> </label>
+		<label for="daikos-youtube-content-<?php echo "$number"; ?>" title=<?php echo __("IMPORTANT: No line brake (new line) after the last video!") ?> style="width: 495px; height: 280px;display:block;"><?php echo __("Videos [YouTubeID]@[TITLE]{Line brake}") ?><textarea style="width: 470px; height: 240px;" id="daikos-youtube-content-<?php echo "$number"; ?>" name="daikos-youtube-content-<?php echo "$number"; ?>"><?php echo htmlspecialchars($options[$number]['content']); ?></textarea></label>
+		<label for="daikos-youtube-tags-<?php echo "$number"; ?>" title=<?php echo __("YouTube tag(s), separated by ,") ?> style="line-height:35px;display:block;"><?php echo __("Feed from YouTube tag(s), separated by ,  : ") ?><input type="text" style="width: 202px;" id="daikos-youtube-tags-<?php echo "$number"; ?>" name="daikos-youtube-tags-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['tags']); ?>" /></label>
+		<label for="daikos-youtube-users-<?php echo "$number"; ?>" title=<?php echo __("YouTube user(s), separated by ,") ?> style="line-height:35px;display:block;"><?php echo __("Feed from YouTube user(s), separated by ,: ") ?><input type="text" style="width: 202px;" id="daikos-youtube-users-<?php echo "$number"; ?>" name="daikos-youtube-users-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['users']); ?>" /></label>
+		<label for="daikos-youtube-show-<?php echo "$number"; ?>"  title=<?php echo __("Show only on specified page(s)/post(s)/category. Default is All") ?> style="line-height:35px;"><?php echo __("Display only on: ") ?><select name="daikos-youtube-show-<?php echo"$number"; ?>" id="daikos-youtube-show-<?php echo"$number"; ?>"><option label="All" value="all" <?php if ($allSelected){echo "selected";} ?>><?php echo __("All") ?></option><option label="Home" value="home" <?php if ($homeSelected){echo "selected";} ?>><?php echo __("Home") ?></option><option label="Post" value="post" <?php if ($postSelected){echo "selected";} ?>><?php echo __("Post(s)") ?></option><option label="Post in Category ID(s)" value="post_in_category" <?php if ($postInCategorySelected){echo "selected";} ?>><?php echo __("Post In Category ID(s)") ?></option><option label="Page" value="page" <?php if ($pageSelected){echo "selected";} ?>><?php echo __("Page(s)") ?></option><option label="Category" value="category" <?php if ($categorySelected){echo "selected";} ?>><?php echo __("Category") ?></option></select></label> 
+		<label for="daikos-youtube-slug-<?php echo "$number"; ?>"  title=<?php echo __("Optional limitation to specific page, post or category. Use ID, slug or title.") ?> style="line-height:35px;"><?php echo __("Slug/Title/ID: ") ?><input type="text" style="width: 130px;" id="daikos-youtube-slug-<?php echo "$number"; ?>" name="daikos-youtube-slug-<?php echo "$number"; ?>" value="<?php echo htmlspecialchars($options[$number]['slug']); ?>" /></label>
+		<?php if ($postInCategorySelected) echo __("<p>In <strong>Post In Category</strong> add one or more cat. ID(s) or name(s) comma separated!</p>") ?>
+		<label for="daikos-youtube-help" title=<?php echo __("You can get more help and instructionc on www.daikos.net!") ?> style="line-height:25px;display:block;"><a href="http://www.daikos.net/widgets/daikos-youtube-widget/"><?php echo __("Help") ?></a></label>
 		<input type="hidden" name="daikos-youtube-submit-<?php echo "$number"; ?>" id="daikos-youtube-submit-<?php echo "$number"; ?>" value="1" />
 	<?php
 	}
 
 	function widget_daikos_youtube($args, $number = 1) {
-		$dytwVersion = "Daiko's YouTube Widget v. 1.2.4";
+		$dytwVersion = "Daiko's YouTube Widget v. 1.2.4 Beta";
 		extract($args);
 		$options = get_option('widget_daikos_youtube');
 		$videoplayeroptions = get_option('widget_daikos_videoplayer');
@@ -268,6 +268,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 /* And do the widget dance! */
  
 /* Do the conditional tag checks. */
+		$disabled_text_dytw = __(" is disabled for this page/post!");
    		switch ($show) {
 				case "all": 
 					echo $before_widget; 
@@ -289,7 +290,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- Daiko's YouTube Widget ".$number." is disabled for this page/post! -->";
+            		echo "<!-- Daiko's YouTube Widget ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "post":
@@ -303,7 +304,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- Daiko's YouTube Widget ".$number." is disabled for this page/post! -->";
+            		echo "<!-- Daiko's YouTube Widget ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "post_in_category":
@@ -327,7 +328,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 						";
 					}
 					else {
-				        echo "<!-- Daiko's YouTube Widget ".$number." is disabled for this page/post! -->";
+				        echo "<!-- Daiko's YouTube Widget ".$number.$disabled_text_dytw." -->";
 				    }
 					break;
 				case "page":
@@ -341,7 +342,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- Daiko's YouTube Widget ".$number." is disabled for this page/post! -->";
+            		echo "<!-- Daiko's YouTube Widget ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "category":
@@ -355,7 +356,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- Daiko's YouTube Widget ".$number." is disabled for this page/post! -->";
+            		echo "<!-- Daiko's YouTube Widget ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 								
@@ -396,18 +397,18 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 	
 	function widget_daikos_youtube_head() {
    			$dytwpath = get_option('siteurl')."/wp-content/plugins/daikos-youtube-widget/";
-			echo("<!-- This loads the required scripts for Daiko's YouTube Widget -->");
+			_e("<!-- This loads the required scripts for Daiko's YouTube Widget -->");
 			echo("<link rel='stylesheet' href='".$dytwpath."dytw.css' type='text/css' media='screen' />");
 			echo("<script type='text/javascript' src='".$dytwpath."js/swfobject.js'></script>");
-			echo("<!-- End of script load Daiko's YouTube Widget -->");
+			_e("<!-- End of script load Daiko's YouTube Widget -->");
 	}
 	
 	function widget_daikos_youtube_footer(){
-			echo("<!-- This is a container for the ThickBox pop-up player in Daiko's YouTube Widget -->
+			_e("<!-- This is a container for the ThickBox pop-up player in Daiko's YouTube Widget -->
 ");
 			echo("<div id='BigPlayer' style='display: none;'>");
 			echo("<div id='flashcontent'>");
-			echo("Loading....</div></div>
+			_e("Loading....</div></div>
 <!-- End of container for the ThickBox pop-up player in Daiko's YouTube Widget -->");
 	}
 	
@@ -484,11 +485,11 @@ function widget_daikos_videoplayer_init() {
 
 	?>
 	        <div>
-	        <label for="daikos-videoplayer-title" style="line-height:35px;display:block;">VideoPlayer title: <input type="text" id="daikos-videoplayer-title" name="daikos-videoplayer-title" value="<?php echo $title; ?>" /></label>
-	        <label for="daikos-videoplayer-width" style="line-height:35px;display:block;">VideoPlayer width: <input type="integer" id="daikos-videoplayer-width" name="daikos-videoplayer-width" value="<?php echo $width; ?>" /></label>
-			<label for="daikos-videoplayer-show"  title="Show only on specified page(s)/post(s)/category. Default is All" style="line-height:35px;">Display only on: <select name="daikos-videoplayer-show" id="daikos-videoplayer-show"><option label="All" value="all" <?php if ($allSelected){echo "selected";} ?>>All</option><option label="Home" value="home" <?php if ($homeSelected){echo "selected";} ?>>Home</option><option label="Post" value="post" <?php if ($postSelected){echo "selected";} ?>>Post(s)</option><option label="Post in Category ID(s)" value="post_in_category" <?php if ($postInCategorySelected){echo "selected";} ?>>Post In Category ID(s)</option><option label="Page" value="page" <?php if ($pageSelected){echo "selected";} ?>>Page(s)</option><option label="Category" value="category" <?php if ($categorySelected){echo "selected";} ?>>Category</option></select></label> 
-			<label for="daikos-videoplayer-slug"  title="Optional limitation to specific page, post or category. Use ID, slug or title." style="line-height:35px;">Slug/Title/ID: <input type="text" style="width: 130px;" id="daikos-videoplayer-slug" name="daikos-videoplayer-slug" value="<?php echo htmlspecialchars($options['slug']); ?>" /></label>
-			<?php if ($postInCategorySelected) echo "<p>In <strong>Post In Category</strong> add one or more cat. IDs (not Slug or Title) comma separated!</p>" ?>
+	        <label for="daikos-videoplayer-title" style="line-height:35px;display:block;"><?php _e("VideoPlayer title: ") ?><input type="text" id="daikos-videoplayer-title" name="daikos-videoplayer-title" value="<?php echo $title; ?>" /></label>
+	        <label for="daikos-videoplayer-width" style="line-height:35px;display:block;"><?php _e("VideoPlayer width: ") ?><input type="integer" id="daikos-videoplayer-width" name="daikos-videoplayer-width" value="<?php echo $width; ?>" /></label>
+			<label for="daikos-videoplayer-show"  title=<?php _e("Show only on specified page(s)/post(s)/category. Default is All") ?> style="line-height:35px;"><?php _e("Display only on: ") ?><select name="daikos-videoplayer-show" id="daikos-videoplayer-show"><option label="All" value="all" <?php if ($allSelected){echo "selected";} ?>><?php echo __("All") ?></option><option label="Home" value="home" <?php if ($homeSelected){echo "selected";} ?>><?php echo __("Home") ?></option><option label="Post" value="post" <?php if ($postSelected){echo "selected";} ?>><?php echo __("Post(s)") ?></option><option label="Post in Category ID(s)" value="post_in_category" <?php if ($postInCategorySelected){echo "selected";} ?>><?php echo __("Post In Category ID(s)") ?></option><option label="Page" value="page" <?php if ($pageSelected){echo "selected";} ?>><?php echo __("Page(s)") ?></option><option label="Category" value="category" <?php if ($categorySelected){echo "selected";} ?>><?php echo __("Category") ?></option></select></label> 
+			<label for="daikos-videoplayer-slug"  title=<?php _e("Optional limitation to specific page, post or category. Use ID, slug or title.") ?> style="line-height:35px;"><?php _e("Slug/Title/ID: ") ?><input type="text" style="width: 130px;" id="daikos-videoplayer-slug" name="daikos-videoplayer-slug" value="<?php echo htmlspecialchars($options['slug']); ?>" /></label>
+			<?php if ($postInCategorySelected) echo __("<p>In <strong>Post In Category</strong> add one or more cat. IDs (not Slug or Title) comma separated!</p>") ?>
 	        <input type="hidden" name="daikos-videoplayer-submit" id="daikos-videoplayer-submit" value="1" />
 	        </div>
 	    <?php
@@ -582,12 +583,13 @@ var so = new SWFObject('http://www.youtube.com/v/".$mediaID."', 'DYTWBigPlayer',
 so.addParam('wmode', 'transparent');
 so.write('BigPlayer2');
 </script>";
-        $fulltext ="<!-- This is just a container for the big video player in Daiko\'s YouTube Widget -->
+        $fulltext =__("<!-- This is just a container for the big video player in Daiko\'s YouTube Widget -->
         <div id=\"BigPlayer2\">
 		</div>
-		".$videocode;
+		").$videocode;
 		
 		/* Do the conditional tag checks. */
+		$disabled_text = __("<!-- Daiko's VideoPlayer is disabled for this page/post! -->");
 		   		switch ($show) {
 						case "all": 
 							echo $before_widget; 
@@ -607,7 +609,7 @@ so.write('BigPlayer2');
 							"; 
 				  		}
 		          		else {
-		            		echo "<!-- Daiko's VideoPlayer is disabled for this page/post! -->";
+		            		echo $disabled_text;
 		          		}
 						break;
 						case "post":
@@ -620,7 +622,7 @@ so.write('BigPlayer2');
 							"; 
 				  		}
 		          		else {
-		            		echo "<!-- Daiko's VideoPlayer is disabled for this page/post! -->";
+		            		echo $disabled_text;
 		          		}
 						break;
 						case "post_in_category":
@@ -643,7 +645,7 @@ so.write('BigPlayer2');
 								"; 
 							}
 							else {
-						        echo "<!-- Daiko's VideoPlayer is disabled for this page/post! -->";
+						        echo $disabled_text;
 						    }
 							break;
 						case "page":
@@ -656,7 +658,7 @@ so.write('BigPlayer2');
 							"; 
 				  		}
 		          		else {
-		            		echo "<!-- Daiko's VideoPlayer is disabled for this page/post! -->";
+		            		echo $disabled_text;
 		          		}
 						break;
 						case "category":
@@ -669,7 +671,7 @@ so.write('BigPlayer2');
 							"; 
 				  		}
 		          		else {
-		            		echo "<!-- Daiko's VideoPlayer is disabled for this page/post! -->";
+		            		echo $disabled_text;
 		          		}
 						break;
 
