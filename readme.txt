@@ -4,7 +4,7 @@ Contributors: Daiko
 Tags: youtube, thickbox, plugin, video, widget, sidebar
 Requires at least: 2.1
 Tested up to: 2.5
-Stable tag: 1.2.4
+Stable tag: 1.2.6
 
 
 Adds a sidebar widget to display random YouTube videos of your own choice. Uses a ThickBox pop-up player or VideoPlayer widget to play the videos.
@@ -23,11 +23,13 @@ If you want to use ThickBox and swfObjects on other parts of your blog, the libr
 
 For those of you using ThickBox already, be aware that activating my ThickBox (I use ThickBox v. 3.1) plugin may cause problems due to the script being loaded twice. Until I find an other way to check if ThickBox is already loaded, please disable your current ThickBox scripts before activating my ThickBox plugin. It should be backwards compatible so your scripts should work just as well with Daiko's ThickBox plugin activated.
 
-A core part of ThickBox is the jquery.js library. I use the WP script loader and a noConflict version of ThickBox to prevent conflicts with prototype.js and scriptacolous.js. Please report any other potential script conflicts. 
+A core part of ThickBox is the jquery.js library. I use the WP script loader and a noConflict version of ThickBox to prevent conflicts with prototype.js and scriptacolous.js. Please report any other potential script conflicts.
+
+NEW in 1.2.6 is support for norwegian and included pot file for others to translate into other languages. 
 
 Author: Rune Fjellheim
 
-Version: 1.2.4
+Version: 1.2.6
 
 Author URI: http://www.daikos.net
 
