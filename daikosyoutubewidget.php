@@ -262,7 +262,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		}
 		else {
-		   	$fulltext = "This widget requires that you activate <a href=\"".get_option('siteurl')."/wp-admin/plugins.php\">Daiko's ThickBox Plugin</a> or activate the <a href=\"".get_option('siteurl')."/wp-admin/widgets.php\">Daiko's VideoPlayer Widget</a>."; 
+		   	$fulltext = echo __("This widget requires that you activate Daiko's ThickBox Plugin or place the Daiko's VideoPlayer Widget."); 
 		}
 		
 /* And do the widget dance! */
