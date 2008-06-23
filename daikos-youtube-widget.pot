@@ -56,7 +56,7 @@ msgid "IMPORTANT: No line brake (new line) after the last video!"
 msgstr ""
 
 #: daikosyoutubewidget.php:82
-msgid "Videos [YouTubeID]@[TITLE]{Line brake}"
+msgid "Videos"
 msgstr ""
 
 #: daikosyoutubewidget.php:83

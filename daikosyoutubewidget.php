@@ -9,8 +9,20 @@ License: GPL
 Author URI: http://www.daikos.net
 */
 
+//load_plugin_textdomain('daikos-youtube-widget');
+//load_plugin_textdomain('daikosyoutubewidget', PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)));
+
+/*internationale*/
+load_plugin_textdomain('daikosyoutubewidget', PLUGINDIR . '/daikos-youtube-widget/languages');
+
+function daikosyoutubewidget_lang_init() {
+	load_plugin_textdomain('daikosyoutubewidget', PLUGINDIR . '/daikos-youtube-widget/languages');
+}
+add_action('init', 'daikosyoutubewidget_lang_init' );
 
 function widget_daikos_youtube_init() {
+	
+	load_plugin_textdomain('daikosyoutubewidget', "/wp-content/plugins/daikos-youtube-widget/languages/");
                 
 
 	if ( !function_exists('register_sidebar_widget') || !function_exists('register_widget_control') )
@@ -262,7 +274,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 			$fulltext = '<div class="DYTWContainer">'.$fulltext.'<div class="DYTWcredits"><a href="http://www.daikos.net" title="'.$dytwVersion.'">YouTube Widget by Daiko</a></div></div>';
 		}
 		else {
-		   	$fulltext = echo __("Activate Daiko's ThickBox Plugin or place Daiko's VideoPlayer Widget!"); 
+		   	$fulltext = __("Activate Daiko's ThickBox Plugin or place Daiko's VideoPlayer Widget!"); 
 		}
 		
 /* And do the widget dance! */
@@ -682,6 +694,13 @@ so.write('BigPlayer2');
 
     register_sidebar_widget('Daiko\'s VideoPlayer', 'widget_daikos_videoplayer');
     register_widget_control('Daiko\'s VideoPlayer', 'widget_daikos_videoplayer_control');
+}
+function daikosyoutubewidget_plugin_basename ($file) 
+{
+    $file = str_replace('\\','/',$file); // sanitize for Win32 installs
+    $file = preg_replace('|/+|','/', $file); // remove any duplicate slash
+    $file = preg_replace('|^.*/wp-content/plugins/|','',$file); // get relative path from plugins dir
+    return $file;
 }
 
 add_action('plugins_loaded', 'widget_daikos_youtube_init'); 
