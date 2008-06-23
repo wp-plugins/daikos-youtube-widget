@@ -1,0 +1,194 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Daikos YouTube Widget - Norsk\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/daikos-youtube-widget\n"
+"POT-Creation-Date: 2008-06-23 14:49+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rune Fjellheim <rune@fjellheim.tv>\n"
+"Language-Team: Daiko <rune@daikos.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Norwegian Bokmal\n"
+"X-Poedit-Country: NORWAY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: daikosyoutubewidget.php:79
+msgid "Title above the widget"
+msgstr "Tittel over widgeten"
+
+#: daikosyoutubewidget.php:79
+msgid "Title: "
+msgstr "Tittel"
+
+#: daikosyoutubewidget.php:80
+msgid "Number of videos to show"
+msgstr "Antall videoer"
+
+#: daikosyoutubewidget.php:80
+msgid "How many videos to show: "
+msgstr "Antall videoer"
+
+#: daikosyoutubewidget.php:81
+msgid "Size of the thumbnails."
+msgstr "Størrelse på miniatyrbildene."
+
+#: daikosyoutubewidget.php:81
+msgid "Format: "
+msgstr "Format:"
+
+#: daikosyoutubewidget.php:81
+msgid "Small"
+msgstr "Små"
+
+#: daikosyoutubewidget.php:81
+msgid "Medium"
+msgstr "Middels"
+
+#: daikosyoutubewidget.php:81
+msgid "Large"
+msgstr "Store"
+
+#: daikosyoutubewidget.php:82
+msgid "IMPORTANT: No line brake (new line) after the last video!"
+msgstr "VIKTIG: Ikke linjeskift etter den siste videoen!"
+
+#: daikosyoutubewidget.php:82
+msgid "Videos"
+msgstr "Videoer"
+
+#: daikosyoutubewidget.php:83
+msgid "YouTube tag(s), separated by ,"
+msgstr "YouTube stikkord, kommaseparert"
+
+#: daikosyoutubewidget.php:83
+msgid "Feed from YouTube tag(s), separated by ,  : "
+msgstr "Feed fra YouTube stikkord, kommaseparert:"
+
+#: daikosyoutubewidget.php:84
+msgid "YouTube user(s), separated by ,"
+msgstr "YouTube bruker(e), kommaseparert"
+
+#: daikosyoutubewidget.php:84
+msgid "Feed from YouTube user(s), separated by ,: "
+msgstr "Feed fra YouTube bruker(e), kommaseparert:"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Show only on specified page(s)/post(s)/category. Default is All"
+msgstr "Vis bare på følgende side(r)/innlegg/kategori(er)"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Display only on: "
+msgstr "Vis bare på:"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "All"
+msgstr "Alle"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Home"
+msgstr "Førstesiden"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Post(s)"
+msgstr "Innlegg"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Post In Category ID(s)"
+msgstr "Innlegg i kategorien(e)"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Page(s)"
+msgstr "Side(ne)"
+
+#: daikosyoutubewidget.php:85
+#: daikosyoutubewidget.php:491
+msgid "Category"
+msgstr "Kategori"
+
+#: daikosyoutubewidget.php:86
+#: daikosyoutubewidget.php:492
+msgid "Limit to specific page, post or category. Use ID, slug or title."
+msgstr "Vis bare på følgende side, innlegg eller kategori. Bruk ID eller tittel."
+
+#: daikosyoutubewidget.php:86
+#: daikosyoutubewidget.php:492
+msgid "Slug/Title/ID: "
+msgstr "Tittel/ID"
+
+#: daikosyoutubewidget.php:87
+#: daikosyoutubewidget.php:493
+msgid "In Post In Category, add one or more cat ID(s)/name(s) comma separated!"
+msgstr "I Innlegg i kategorien, spesifisér en eller flere kategori ID(er)/navn kommaseparert!"
+
+#: daikosyoutubewidget.php:88
+msgid "You can get more help and instructionc on www.daikos.net!"
+msgstr "Du kan få mer hjelp og veiledning på www.daikos.net!"
+
+#: daikosyoutubewidget.php:88
+msgid "Help"
+msgstr "Hjelp"
+
+#: daikosyoutubewidget.php:265
+msgid "Activate Daiko's ThickBox Plugin or place Daiko's VideoPlayer Widget!"
+msgstr "Aktivér Daikos ThickBox Innstill eller plassér Daikos VideoPlayer widget!"
+
+#: daikosyoutubewidget.php:271
+msgid "Daiko's YouTube Widget is disabled for this page/post!"
+msgstr "Daikos YouTube widget er deaktivért på denne siden/dette innlegget!"
+
+#: daikosyoutubewidget.php:387
+msgid "Daiko's YouTube Widgets"
+msgstr "Daikos YouTube widget'er"
+
+#: daikosyoutubewidget.php:388
+msgid "How many YouTube widgets would you like?"
+msgstr "Hvor mange YouTube widget'er behøver du?"
+
+#: daikosyoutubewidget.php:392
+msgid "Save"
+msgstr "Lagre"
+
+#: daikosyoutubewidget.php:400
+msgid "This loads the required scripts for Daiko's YouTube Widget"
+msgstr "Dette laster inn nødvendige skript til Daikos YouTube widget"
+
+#: daikosyoutubewidget.php:403
+msgid "End of script load Daiko's YouTube Widget."
+msgstr "Slutten på skriptlastingen til Daikos YouTube widget"
+
+#: daikosyoutubewidget.php:407
+msgid "This is a container for the ThickBox player in Daiko's YouTube Widget"
+msgstr "Dette er en beholder til ThickBox spilleren i Daikos YouTube widget"
+
+#: daikosyoutubewidget.php:411
+msgid "Loading...."
+msgstr "Laster inn...."
+
+#: daikosyoutubewidget.php:413
+msgid "End of container"
+msgstr "Slutt på beholderen"
+
+#: daikosyoutubewidget.php:489
+msgid "VideoPlayer title: "
+msgstr "VideoPlayer tittel:"
+
+#: daikosyoutubewidget.php:490
+msgid "VideoPlayer width: "
+msgstr "VideoPlayer bredde:"
+
+#: daikosyoutubewidget.php:587
+msgid "Container for the big video player in Daiko's YouTube Widget"
+msgstr "Beholder for den store videospilleren i Daikos YouTube widget"
+
+#: daikosyoutubewidget.php:593
+msgid "Daiko's VideoPlayer is disabled for this page/post!"
+msgstr "Daikos VideoPlayer er deaktivert på denne siden/dette innlegget!"
+
