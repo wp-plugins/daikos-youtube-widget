@@ -268,7 +268,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 /* And do the widget dance! */
  
 /* Do the conditional tag checks. */
-		$disabled_text_dytw = __(" Daiko's YouTube Widget is disabled for this page/post!");
+		$disabled_text_dytw = __("Daiko's YouTube Widget is disabled for this page/post!");
    		switch ($show) {
 				case "all": 
 					echo $before_widget; 
@@ -290,7 +290,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- DYTW".$number.$disabled_text_dytw." -->";
+            		echo "<!-- DYTW ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "post":
@@ -304,7 +304,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- DYTW".$number.$disabled_text_dytw." -->";
+            		echo "<!-- DYTW ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "post_in_category":
@@ -328,7 +328,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 						";
 					}
 					else {
-				        echo "<!-- DYTW".$number.$disabled_text_dytw." -->";
+				        echo "<!-- DYTW ".$number.$disabled_text_dytw." -->";
 				    }
 					break;
 				case "page":
@@ -342,7 +342,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- DYTW".$number.$disabled_text_dytw." -->";
+            		echo "<!-- DYTW ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 				case "category":
@@ -356,7 +356,7 @@ t_xQN6s_COw@Sofia ja Anna - Du Calmmit (your eyes)
 					";
 		  		}
           		else {
-            		echo "<!-- DYTW".$number.$disabled_text_dytw." -->";
+            		echo "<!-- DYTW ".$number.$disabled_text_dytw." -->";
           		}
 				break;
 								
@@ -584,7 +584,7 @@ var so = new SWFObject('http://www.youtube.com/v/".$mediaID."', 'DYTWBigPlayer',
 so.addParam('wmode', 'transparent');
 so.write('BigPlayer2');
 </script>";
-        $fulltext ="<!-- ".__("Container for the big video player in Daiko\'s YouTube Widget")." -->
+        $fulltext ="<!-- ".__("Container for the big video player in Daiko's YouTube Widget")." -->
         <div id=\"BigPlayer2\">
 		</div>
 		".$videocode;
